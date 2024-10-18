@@ -1,0 +1,2 @@
+# MyPage
+New entry page
