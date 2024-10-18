@@ -7,27 +7,31 @@
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #e8eaf6;
+            background-color: #ffe4e6;
+            background-image: url('https://img.icons8.com/emoji/48/000000/heart-suit.png'); /* Small heart pattern */
+            background-size: 40px;
             margin: 0;
             padding: 0;
         }
         header {
-            background: linear-gradient(45deg, #3f51b5, #1a73e8);
+            background: linear-gradient(45deg, #ff7eb9, #ff65a3);
             color: #fff;
             padding: 20px;
             text-align: center;
+            border-bottom: 5px solid #ff007f;
         }
         .container {
             max-width: 800px;
             margin: 20px auto;
-            background: #fff;
+            background: #fff0f5;
             padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 20px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            position: relative;
         }
         h1 {
             margin: 0;
-            font-size: 24px;
+            font-size: 28px;
         }
         .tabs {
             display: flex;
@@ -35,15 +39,20 @@
             margin-bottom: 20px;
         }
         .tab {
-            background: #3f51b5;
+            background: #ff85a1;
             color: #fff;
             padding: 10px 20px;
-            border-radius: 5px;
+            border-radius: 20px;
             cursor: pointer;
-            transition: background 0.3s;
+            transition: background 0.3s, transform 0.2s;
         }
-        .tab:hover, .tab.active {
-            background: #1a73e8;
+        .tab:hover {
+            background: #ff4b81;
+            transform: scale(1.05);
+        }
+        .tab.active {
+            background: #ff007f;
+            box-shadow: 0 4px 8px rgba(255, 0, 127, 0.4);
         }
         .info, .contact {
             display: none;
@@ -52,19 +61,45 @@
             display: block;
         }
         p {
-            font-size: 16px;
-            line-height: 1.6;
+            font-size: 18px;
+            line-height: 1.8;
             color: #444;
+            text-align: center;
         }
         p strong {
-            color: #3f51b5;
+            color: #ff007f;
         }
         a {
-            color: #1a73e8;
+            color: #ff007f;
             text-decoration: none;
         }
         a:hover {
             text-decoration: underline;
+            color: #ff4b81;
+        }
+        /* Heart decorations */
+        .heart {
+            position: absolute;
+            width: 24px;
+            height: 24px;
+            background: url('https://img.icons8.com/emoji/48/000000/heart-suit.png') no-repeat center center;
+            background-size: contain;
+        }
+        .heart-1 {
+            top: -10px;
+            right: -10px;
+        }
+        .heart-2 {
+            bottom: -10px;
+            left: -10px;
+        }
+        .heart-3 {
+            top: -10px;
+            left: -10px;
+        }
+        .heart-4 {
+            bottom: -10px;
+            right: -10px;
         }
     </style>
 </head>
@@ -73,6 +108,10 @@
         <h1>I'm Sorry WIFEY, But... ILY</h1>
     </header>
     <div class="container">
+        <div class="heart heart-1"></div>
+        <div class="heart heart-2"></div>
+        <div class="heart heart-3"></div>
+        <div class="heart heart-4"></div>
         <div class="tabs">
             <div class="tab active" onclick="openTab('ISHQ')">Ishq</div>
             <div class="tab" onclick="openTab('contact')">Contact</div>
@@ -110,4 +149,3 @@
     </script>
 </body>
 </html>
-
